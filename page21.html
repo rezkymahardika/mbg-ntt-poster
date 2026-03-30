@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster: </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #f1f5f9; /* Dark slate outer background */
+            color: #0f172a; 
+            padding: 2rem 1rem;
+            display: flex;
+			flex-direction: column; /* Tambahan */
+            align-items: center;    /* Tambahan */
+            justify-content: center;
+        }
+        /* Kanvas Poster */
+        .poster-canvas {
+        width: 1400px; 
+		margin: 2rem auto;
+		background: white;
+		box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2); 
+		border-radius: 1.5rem; 
+		overflow: hidden; 
+        }
+        .header-gradient { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
+        .section-card { background: #ffffff; border-left: 5px solid #3b82f6; padding: 1.5rem; height: 100%; border-radius: 0.5rem; border: 1px solid #e2e8f0; border-left-width: 5px; }
+        .badge { background: #dbeafe; color: #1e40af; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+        .chart-container { position: relative; height: 260px; width: 100%; }
+        }
+        .raci-tag { font-size: 9px; font-weight: 900; padding: 2px 6px; border-radius: 4px; display: inline-block;}
+        .raci-r { background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe;}
+        .raci-a { background: #fef3c7; color: #92400e; border: 1px solid #fde68a;}
+        .raci-c { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0;}
+        .raci-i { background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0;}
+        
+        /* Custom scrollbar for small tables if needed */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+    </style>
+</head>
+
+<div class="w-[1400px] max-w-full flex justify-between items-center mt-6 mb-4 px-4">
+        <a href="index.html" class="px-6 py-3 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300 shadow-lg flex items-center gap-2">
+            ⬅️ Sebelumnya
+        </a>
+        <span class="text-sm font-bold text-gray-500 bg-white px-6 py-2 rounded-full shadow-sm border border-gray-200">
+            Halaman 2 dari 2
+        </span>
+        <button class="px-6 py-3 bg-gray-300 text-gray-500 font-bold rounded-full cursor-not-allowed shadow-sm flex items-center gap-2" disabled>
+            Selanjutnya ➡️
+        </button>
+    </div>
+<body>
+
+    <div class="poster-canvas flex flex-col">
+        
+        <header class="bg-slate-900 text-white p-8 relative overflow-hidden flex flex-col md:flex-row justify-between items-center gap-6 border-b-8 border-blue-600">
+            <div class="absolute right-0 top-0 w-[600px] h-[600px] bg-blue-600 rounded-full mix-blend-overlay filter blur-[100px] opacity-40 translate-x-1/3 -translate-y-1/3"></div>
+            
+            <div class="relative z-10 w-full flex flex-col md:flex-row justify-between items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-black tracking-tighter uppercase leading-none mb-2">Strategi Operasional & Swakelola MBG</h1>
+                </div>
+                <div class="mt-4 md:mt-0 text-right hidden md:block">
+                    <div class="w-24 h-24 bg-white/5 border border-white/20 rounded-xl flex items-center justify-center p-2">
+                        <span class="text-4xl">🇮🇩</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10">
+
+            <section class="panel md:col-span-12 shadow-sm border-t-4 border-t-blue-500">
+                <div class="panel-header bg-slate-50">
+                    <span class="text-xl">🎯</span>
+                    <h2 class="text-sm font-black text-slate-800 uppercase tracking-tight">1. Theory of Change (Logic Model)</h2>
+                </div>
+                <div class="p-5">
+                    <div class="grid grid-cols-1 md:grid-cols-5 gap-3 relative">
+                        <div class="hidden md:block absolute top-[20px] left-10 right-10 h-1 bg-slate-200 z-0"></div>
+
+                        <div class="bg-white border border-slate-200 p-4 rounded-xl relative z-10 shadow-sm">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-8 h-8 rounded-full bg-slate-100 border border-slate-300 flex items-center justify-center font-black text-xs text-slate-500">01</div>
+                                <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest">Input</span>
+                            </div>
+                            <h4 class="font-bold text-[11px] text-slate-800 mb-2 border-b border-slate-100 pb-1">Kelembagaan</h4>
+                            <ul class="text-[10px] space-y-1 text-slate-600 leading-tight">
+                                <li>• Rekrutmen SPPI & Ahli Gizi</li>
+                                <li>• Revitalisasi Dapur</li>
+                                <li>• Infrastruktur SDM</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50 border border-blue-200 p-4 rounded-xl relative z-10 shadow-sm">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 border border-blue-300 flex items-center justify-center font-black text-xs text-blue-600">02</div>
+                                <span class="text-[9px] font-black text-blue-500 uppercase tracking-widest">Throughput</span>
+                            </div>
+                            <h4 class="font-bold text-[11px] text-blue-900 mb-2 border-b border-blue-200/50 pb-1">Rantai Pasok</h4>
+                            <ul class="text-[10px] space-y-1 text-blue-800 font-medium leading-tight">
+                                <li>• Lean Production Flow</li>
+                                <li>• Logistics Optimization</li>
+                                <li>• Mitra Nelayan/BUMDes</li>
+                            </ul>
+                        </div>
+                        <div class="bg-indigo-50 border border-indigo-200 p-4 rounded-xl relative z-10 shadow-sm">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-8 h-8 rounded-full bg-indigo-100 border border-indigo-300 flex items-center justify-center font-black text-xs text-indigo-600">03</div>
+                                <span class="text-[9px] font-black text-indigo-500 uppercase tracking-widest">Yield</span>
+                            </div>
+                            <h4 class="font-bold text-[11px] text-indigo-900 mb-2 border-b border-indigo-200/50 pb-1">Operasional</h4>
+                            <ul class="text-[10px] space-y-1 text-indigo-800 font-medium leading-tight">
+                                <li>• Verified Healthy Meals</li>
+                                <li>• Digital CPM Logs</li>
+                                <li>• Distribusi Standar AKG</li>
+                            </ul>
+                        </div>
+                        <div class="bg-violet-50 border border-violet-200 p-4 rounded-xl relative z-10 shadow-sm">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-8 h-8 rounded-full bg-violet-100 border border-violet-300 flex items-center justify-center font-black text-xs text-violet-600">04</div>
+                                <span class="text-[9px] font-black text-violet-500 uppercase tracking-widest">Outcome</span>
+                            </div>
+                            <h4 class="font-bold text-[11px] text-violet-900 mb-2 border-b border-violet-200/50 pb-1">Edukasi</h4>
+                            <ul class="text-[10px] space-y-1 text-violet-800 font-medium leading-tight">
+                                <li>• Literasi Gizi Warga</li>
+                                <li>• Perubahan Perilaku</li>
+                                <li>• Akuntabilitas Program ↑</li>
+                            </ul>
+                        </div>
+                        <div class="bg-red-800 border border-red-900 p-4 rounded-xl relative z-10 shadow-md text-white">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-8 h-8 rounded-full bg-red-700 border border-red-500 flex items-center justify-center font-black text-xs text-white">05</div>
+                                <span class="text-[9px] font-black text-red-300 uppercase tracking-widest">Impact</span>
+                            </div>
+                            <h4 class="font-bold text-[11px] text-red-100 mb-2 border-b border-red-700 pb-1">Strategic Goals</h4>
+                            <ul class="text-[10px] space-y-1 text-white font-bold leading-tight">
+                                <li>🎯 Penurunan Stunting</li>
+                                <li>🎯 Reduksi Kemiskinan</li>
+                                <li>🎯 Prestasi Siswa ↑</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel md:col-span-7 shadow-sm border-t-4 border-t-slate-800">
+                <div class="panel-header bg-slate-50">
+                    <span class="text-xl">📋</span>
+                    <h2 class="text-sm font-black text-slate-800 uppercase tracking-tight">2. RACI Responsibility Matrix</h2>
+                </div>
+                <div class="p-0 overflow-x-auto">
+                    <table class="w-full text-[10px] text-left">
+                        <thead class="bg-slate-100 text-slate-600 font-bold uppercase tracking-wider text-[9px]">
+                            <tr>
+                                <th class="p-2 border-r border-slate-200 pl-4">Project Task / Phase</th>
+                                <th class="p-2 border-r border-slate-200 text-center">Tim FT</th>
+                                <th class="p-2 border-r border-slate-200 text-center">Non-FT</th>
+                                <th class="p-2 border-r border-slate-200 text-center">BGN</th>
+                                <th class="p-2 text-center pr-4">Pokmas</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 font-medium text-slate-700">
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-2 border-r border-slate-100 pl-4">Revitalisasi Dapur & Sanitasi</td>
+                                <td class="p-2 border-r border-slate-100 text-center"><span class="raci-tag raci-r">R</span></td>
+                                <td class="p-2 border-r border-slate-100 text-center"><span class="raci-tag raci-c">C</span></td>
+                                <td class="p-2 border-r border-slate-100 text-center"><span class="raci-tag raci-a">A</span></td>
+                                <td class="p-2 text-center pr-4"><span class="raci-tag raci-i">I</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-2 border-r border-slate-100 pl-4">Formulasi Menu & AKG Siswa</td>
+                                <td class="p-2 border-r border-slate-100 text-center"><span class="raci-tag raci-i">I</span></td>
+                                <td class="p-2 border-r border-slate-100 text-center"><span class="raci-tag raci-r">R</span></td>
+                                <td class="p-2 border-r border-slate-100 text-center"><span class="raci-tag raci-a">A</span></td>
+                                <td class="p-2 text-center pr-4"><span class="raci-tag raci-c">C</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-2 border-r border-slate-100 pl-4">Supply Chain & Logistics</td>
+                                <td class="p-2 border-r border-slate-100 text-center"><span class="raci-tag raci-r">R</span></td>
+                                <td class="p-2 border-r border-slate-100 text-center"><span class="raci-tag raci-i">I</span></td>
+                                <td class="p-2 border-r border-slate-100 text-center"><span class="raci-tag raci-a">A</span></td>
+                                <td class="p-2 text-center pr-4"><span class="raci-tag raci-r">R</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-2 border-r border-slate-100 pl-4">Mitigasi Konflik & Edukasi</td>
+                                <td class="p-2 border-r border-slate-100 text-center"><span class="raci-tag raci-i">I</span></td>
+                                <td class="p-2 border-r border-slate-100 text-center"><span class="raci-tag raci-r">R</span></td>
+                                <td class="p-2 border-r border-slate-100 text-center"><span class="raci-tag raci-i">I</span></td>
+                                <td class="p-2 text-center pr-4"><span class="raci-tag raci-c">C</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="panel md:col-span-5 shadow-sm border-t-4 border-t-indigo-500">
+                <div class="panel-header bg-slate-50">
+                    <span class="text-xl">🤝</span>
+                    <h2 class="text-sm font-black text-slate-800 uppercase tracking-tight">3. Engagement Matrix</h2>
+                </div>
+                <div class="p-4 grid grid-cols-2 gap-3 bg-slate-50/50 h-[calc(100%-46px)]">
+                    <div class="p-3 bg-white border border-blue-200 rounded-lg shadow-sm border-l-4 border-l-blue-500 flex flex-col justify-center">
+                        <h4 class="text-[9px] font-black text-blue-700 uppercase">Manage Closely</h4>
+                        <p class="text-[10px] font-bold text-slate-800 leading-tight mt-1">BGN, Pemda, Pokmas, PPK</p>
+                    </div>
+                    <div class="p-3 bg-white border border-slate-200 rounded-lg shadow-sm flex flex-col justify-center">
+                        <h4 class="text-[9px] font-black text-slate-500 uppercase">Keep Satisfied</h4>
+                        <p class="text-[10px] font-bold text-slate-800 leading-tight mt-1">PUPR, APIP / Inspektorat</p>
+                    </div>
+                    <div class="p-3 bg-white border border-slate-200 rounded-lg shadow-sm flex flex-col justify-center">
+                        <h4 class="text-[9px] font-black text-slate-500 uppercase">Keep Informed</h4>
+                        <p class="text-[10px] font-bold text-slate-800 leading-tight mt-1">Orang Tua, Siswa, Guru</p>
+                    </div>
+                    <div class="p-3 bg-white border border-slate-200 rounded-lg shadow-sm flex flex-col justify-center">
+                        <h4 class="text-[9px] font-black text-slate-500 uppercase">Monitor</h4>
+                        <p class="text-[10px] font-bold text-slate-800 leading-tight mt-1">Media, Publik Non-Inti</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel md:col-span-12 shadow-sm border-t-4 border-t-amber-500">
+                <div class="panel-header bg-slate-50 flex justify-between">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xl">🗂️</span>
+                        <h2 class="text-sm font-black text-slate-800 uppercase tracking-tight">4. Stakeholder Registry</h2>
+                    </div>
+                    <span class="text-[9px] bg-white border border-slate-200 px-2 py-1 rounded-md font-bold text-slate-500">Detail Operasional</span>
+                </div>
+                <div class="p-0 overflow-x-auto">
+                    <table class="w-full text-[10px] text-left">
+                        <thead class="bg-slate-100 text-slate-600 font-bold uppercase tracking-wider text-[9px]">
+                            <tr>
+                                <th class="p-2 border-r border-slate-200 pl-4 w-1/5">Stakeholder</th>
+                                <th class="p-2 border-r border-slate-200 w-1/6">Kategori</th>
+                                <th class="p-2 border-r border-slate-200 w-2/5">Ekspektasi Utama</th>
+                                <th class="p-2 pr-4 w-1/4">Pengaruh / Kepentingan</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 font-medium text-slate-700">
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-2 border-r border-slate-100 pl-4 font-bold text-slate-900 bg-slate-50/50">BGN (Badan Gizi Nasional)</td>
+                                <td class="p-2 border-r border-slate-100 text-[9px]">Pemerintah Pusat</td>
+                                <td class="p-2 border-r border-slate-100">Akuntabilitas anggaran dan ketercapaian target gizi nasional.</td>
+                                <td class="p-2 pr-4"><strong class="text-red-600">High / High</strong> <span class="text-slate-400 text-[8px] uppercase ml-1">(Accountable)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-2 border-r border-slate-100 pl-4 font-bold text-slate-900 bg-slate-50/50">Tim FT (Engineering)</td>
+                                <td class="p-2 border-r border-slate-100 text-[9px]">Internal Proyek</td>
+                                <td class="p-2 border-r border-slate-100">Infrastruktur dapur efisien (Lean) & sanitasi standar industri.</td>
+                                <td class="p-2 pr-4"><strong class="text-red-600">High / High</strong> <span class="text-slate-400 text-[8px] uppercase ml-1">(Resp. Teknis)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-2 border-r border-slate-100 pl-4 font-bold text-slate-900 bg-slate-50/50">Pokmas</td>
+                                <td class="p-2 border-r border-slate-100 text-[9px]">Pelaksana Lokal</td>
+                                <td class="p-2 border-r border-slate-100">Pemberdayaan ekonomi lokal & kemudahan operasional harian.</td>
+                                <td class="p-2 pr-4"><strong class="text-amber-600">High / Medium</strong> <span class="text-slate-400 text-[8px] uppercase ml-1">(Resp. Operasional)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-2 border-r border-slate-100 pl-4 font-bold text-slate-900 bg-slate-50/50">Ahli Gizi (Non-FT)</td>
+                                <td class="p-2 border-r border-slate-100 text-[9px]">Spesialis</td>
+                                <td class="p-2 border-r border-slate-100">Formulasi menu sesuai standar AKG & kualitas bahan baku.</td>
+                                <td class="p-2 pr-4"><strong class="text-amber-600">Medium / High</strong> <span class="text-slate-400 text-[8px] uppercase ml-1">(Resp. Mutu)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-2 border-r border-slate-100 pl-4 font-bold text-slate-900 bg-slate-50/50">BUMDes / Nelayan</td>
+                                <td class="p-2 border-r border-slate-100 text-[9px]">Supply Chain</td>
+                                <td class="p-2 border-r border-slate-100">Serapan hasil produksi lokal & kepastian pembayaran.</td>
+                                <td class="p-2 pr-4"><strong class="text-emerald-600">Medium / Low</strong> <span class="text-slate-400 text-[8px] uppercase ml-1">(Mitra)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="panel md:col-span-5 shadow-sm border-t-4 border-t-red-500 bg-red-50/30">
+                <div class="panel-header bg-white/50 border-b border-red-100">
+                    <span class="text-xl">⚠️</span>
+                    <h2 class="text-sm font-black text-red-900 uppercase tracking-tight">5. Risk Mitigation</h2>
+                </div>
+                <div class="p-4 space-y-3">
+                    <div class="bg-white p-3 border border-red-100 rounded-lg shadow-sm">
+                        <h4 class="text-[10px] font-black text-slate-800 uppercase flex justify-between">Konflik KBM vs Dapur <span class="text-red-500 text-[8px] bg-red-50 px-1 rounded">High</span></h4>
+                        <p class="text-[9px] text-slate-600 mt-1">Operasional dapur berpotensi ganggu sekolah.</p>
+                        <div class="mt-2 pt-2 border-t border-slate-100 text-[9px] font-bold text-emerald-700 flex gap-1"><span class="text-[10px]">💡</span> Solusi: Lokalisasi terpisah & tenaga luar.</div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-white p-3 border border-orange-100 rounded-lg shadow-sm">
+                            <h4 class="text-[10px] font-black text-slate-800 uppercase">Kualitas Vendor</h4>
+                            <p class="text-[9px] text-slate-600 mt-1">Risiko bahan sub-standar.</p>
+                            <div class="mt-2 pt-2 border-t border-slate-100 text-[9px] font-bold text-emerald-700">💡 Quality Record.</div>
+                        </div>
+                        <div class="bg-white p-3 border border-orange-100 rounded-lg shadow-sm">
+                            <h4 class="text-[10px] font-black text-slate-800 uppercase">Resistensi Lokal</h4>
+                            <p class="text-[9px] text-slate-600 mt-1">Warung sekitar protes.</p>
+                            <div class="mt-2 pt-2 border-t border-slate-100 text-[9px] font-bold text-emerald-700">💡 Inklusi rantai pasok.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel md:col-span-7 shadow-sm border-t-4 border-t-emerald-500">
+                <div class="panel-header bg-slate-50">
+                    <span class="text-xl">🔄</span>
+                    <h2 class="text-sm font-black text-slate-800 uppercase tracking-tight">6. CPM Cycle (Collaborative Performance)</h2>
+                </div>
+                <div class="p-5 h-[calc(100%-46px)] flex flex-col justify-center">
+                    <div class="grid grid-cols-4 gap-4 relative">
+                        <div class="absolute top-5 left-10 right-10 h-0.5 bg-emerald-200 z-0"></div>
+                        
+                        <div class="text-center relative z-10">
+                            <div class="w-10 h-10 mx-auto rounded-full bg-white border-2 border-emerald-500 text-emerald-600 flex items-center justify-center font-black text-sm mb-2 shadow-sm">1</div>
+                            <h4 class="text-[10px] font-black uppercase text-slate-800 leading-tight">Goal Alignment</h4>
+                            <p class="text-[9px] text-slate-500 mt-1 leading-tight">Sinkronisasi visi & sosialisasi tujuan.</p>
+                        </div>
+                        <div class="text-center relative z-10">
+                            <div class="w-10 h-10 mx-auto rounded-full bg-white border-2 border-emerald-500 text-emerald-600 flex items-center justify-center font-black text-sm mb-2 shadow-sm">2</div>
+                            <h4 class="text-[10px] font-black uppercase text-slate-800 leading-tight">Joint Indicator</h4>
+                            <p class="text-[9px] text-slate-500 mt-1 leading-tight">Penetapan standar kelayakan bersama.</p>
+                        </div>
+                        <div class="text-center relative z-10">
+                            <div class="w-10 h-10 mx-auto rounded-full bg-white border-2 border-emerald-500 text-emerald-600 flex items-center justify-center font-black text-sm mb-2 shadow-sm">3</div>
+                            <h4 class="text-[10px] font-black uppercase text-slate-800 leading-tight">Shared Monitor</h4>
+                            <p class="text-[9px] text-slate-500 mt-1 leading-tight">Dashboard digital & Laporan harian.</p>
+                        </div>
+                        <div class="text-center relative z-10">
+                            <div class="w-10 h-10 mx-auto rounded-full bg-white border-2 border-emerald-500 text-emerald-600 flex items-center justify-center font-black text-sm mb-2 shadow-sm">4</div>
+                            <h4 class="text-[10px] font-black uppercase text-slate-800 leading-tight">Joint Adapt</h4>
+                            <p class="text-[9px] text-slate-500 mt-1 leading-tight">Review progres & perbaikan iteratif.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 bg-slate-100 p-2 rounded text-center border border-slate-200">
+                        <p class="text-[9px] font-bold text-slate-600 uppercase tracking-widest"><span class="animate-pulse text-blue-500">●</span> Verification & Validation Loop Data Input</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel md:col-span-12 bg-slate-900 border-none text-white overflow-hidden relative shadow-lg">
+                <div class="absolute right-0 bottom-0 w-[400px] h-[400px] bg-indigo-500 rounded-full mix-blend-screen filter blur-[80px] opacity-20 pointer-events-none"></div>
+                
+                <div class="p-5 flex flex-col md:flex-row gap-6 relative z-10 items-stretch">
+                    
+                    <div class="md:w-1/4 flex flex-col justify-center border-r border-slate-700 pr-4">
+                        <span class="text-3xl mb-2">⚙️</span>
+                        <h2 class="text-lg font-black uppercase tracking-tight leading-tight">7. Technical Synergy</h2>
+                        <p class="text-[10px] text-slate-400 mt-2">Integrasi fungsional lintas disiplin ilmu dan teknologi untuk skala operasional.</p>
+                    </div>
+
+                    <div class="md:w-3/4 grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
+                            <h4 class="text-[10px] font-black text-blue-400 uppercase tracking-wider mb-2 border-b border-slate-700 pb-2">📐 Tim FT (Engineering)</h4>
+                            <ul class="text-[10px] space-y-2 text-slate-300 font-medium">
+                                <li><strong class="text-white">Sipil:</strong> Revitalisasi & Sanitasi</li>
+                                <li><strong class="text-white">Mesin:</strong> Efisiensi Alat Produksi</li>
+                                <li><strong class="text-white">Industri:</strong> Lean Production Dapur</li>
+                                <li><strong class="text-white">IT:</strong> Monitoring Dashboard</li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
+                            <h4 class="text-[10px] font-black text-emerald-400 uppercase tracking-wider mb-2 border-b border-slate-700 pb-2">🩺 Spesialis Non-FT</h4>
+                            <ul class="text-[10px] space-y-2 text-slate-300 font-medium">
+                                <li><strong class="text-white">Gizi:</strong> Formulasi Menu AKG</li>
+                                <li><strong class="text-white">Akuntan:</strong> Manajemen RAB</li>
+                                <li><strong class="text-white">Psikolog:</strong> Perilaku Makan Siswa</li>
+                                <li><strong class="text-white">Kebijakan:</strong> Komunikasi Strategis</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-600/20 p-4 rounded-xl border border-blue-500/50 relative overflow-hidden">
+                            <div class="absolute right-[-10px] bottom-[-10px] text-6xl opacity-10">🤖</div>
+                            <h4 class="text-[10px] font-black text-blue-200 uppercase tracking-wider mb-2 border-b border-blue-500/30 pb-2 flex items-center gap-1"><span>🤖</span> AI Operational Role</h4>
+                            <ul class="text-[10px] space-y-2 text-blue-100 font-bold relative z-10">
+                                <li>✓ Predictive Supply Chain</li>
+                                <li>✓ Automated Hygiene Verif.</li>
+                                <li>✓ Logistics Route Optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="md:col-span-12 bg-blue-50 border border-blue-200 rounded-xl p-4 flex items-center gap-4 mt-2">
+                <div class="text-3xl">📌</div>
+                <div>
+                    <h3 class="text-[11px] font-black text-blue-900 uppercase tracking-wider mb-1">Kesimpulan Executive</h3>
+                    <p class="text-[11px] text-slate-700 font-medium leading-relaxed">
+                        Proyek ini menggeser model distribusi pasif menjadi <strong class="text-blue-700">partisipasi aktif sekolah</strong>. Melalui penyediaan dapur berbasis sekolah dengan skema swakelola, program Makan Bergizi Gratis (MBG) di NTT akan lebih <strong class="bg-emerald-100 text-emerald-800 px-1 rounded">berkelanjutan, aman, dan menggerakkan ekonomi kerakyatan</strong> secara terukur dan transparan.
+                    </p>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="bg-slate-100 border-t border-slate-300 p-4 mt-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center text-[9px] font-bold text-slate-500 uppercase tracking-widest gap-2">
+                <p>Poster — MBG Swakelola Model</p>
+                <p>Ref: Vogel (2012) • Perpres 115/2025 • BGN Guide (2025) • BPS NTT (2026) • JUKNIS-DIRJEN PAUD </p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
